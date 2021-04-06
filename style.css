@@ -1,0 +1,286 @@
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url('/fonts');
+    src: url('/fonts/IRANSansWeb-Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+         url('/fonts/IRANSansWeb-Bold.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+         url('/fonts/IRANSans-Bold-web.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+         url('/fonts/IRANSansWeb-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/IRANSans-Medium.eot');
+    src: url('/fonts/IRANSans-Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+         url('/fonts/IRANSans-Medium.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+         url('/fonts/IRANSans-Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+         url('/fonts/IRANSans-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 200;
+	src: url('/fonts/IRANSansWeb-Light.eot');
+	src: url('/fonts/IRANSansWeb-Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('/fonts/IRANSansWeb-Light.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+		 url('/fonts/IRANSansWeb-Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('/fonts/IRANSansWeb-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: normal;
+	src: url('/fonts/IRANSansWeb.eot');
+	src: url('/fonts/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('/fonts/IRANSansWeb.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+		 url('/fonts/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('/fonts/IRANSansWeb.ttf') format('truetype');
+}
+body{
+    background-image: url('/imgs/PT4052-Mosa-202104061558-LRT.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'IRANSans';
+}
+
+html{
+    font-size: 62.5%;
+}
+@keyframes bottomTop{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+    100%{
+        transform: translateY(-10%);
+        opacity: 0;
+
+    }
+}
+@keyframes topTobottom{
+0%{
+    transform: translateY(0);
+    opacity: 1;
+}
+100%{
+    transform: translateY(50%);
+    opacity: 0;
+
+}
+}
+.form{
+    border-radius: 15px;
+    width: 40rem;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0px 0px 8px 4px #eee;
+    position: relative;
+    transition: background-color 1s;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    animation-name:  bottomTop;
+    animation-duration: 500ms;
+
+}
+.label{
+    font-size: 2rem;
+    margin-top: 2rem;
+    align-self: flex-start;
+}
+.btn{
+    font-size: 2rem;
+    outline: none;
+    border: 1px solid #efef;
+    cursor: pointer;
+}
+.input{
+    display: block;
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    border: 1px solid rgba(139, 138, 138, 0.822);
+    font-size: 1.7rem;
+    font-family: inherit;
+}
+.input:focus{
+    outline: none;
+    font-size: 1.7rem;
+    font-family: inherit;
+    border: 1px solid #00796B;
+}
+.btn-login{
+    background-color: #00796B;
+    margin-top: 3rem;
+    color: #fff;
+    border-radius: 5px;
+    width: 20rem;
+
+}
+.circle{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #7C4DFF;
+    width: 6rem;
+    height: 6rem;
+    clip-path: circle(50% at 50% 50%);
+    outline: none;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 4px #eee;
+    transition: all 500ms;
+    
+}
+.fa-user-plus:before{
+    transition: all 500ms;
+
+}
+/* register */
+.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* visibility: hidden; */
+    display: none;
+    transition: all ease-in-out 500ms;
+}
+.btn-register{
+    
+    width: 20rem;
+    background-color: #F9A825;
+    margin-top: 3rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+/* active */
+.active.register {
+    /* visibility: visible !important; */
+    display: flex;
+    animation-name: bottomTop;
+    animation-duration: 500ms;
+
+}
+.active.login{
+    display: none;
+
+    animation-name:  topTobottom;
+    animation-duration: 500ms;
+}
+.active.fa-user-plus:before {
+    transition: all 500ms;
+    
+    content: "\f090";
+    
+}
+.active.circle{
+    background-color: #F4511E;
+}
+/* end active's */
+.link-forget{
+    cursor: pointer;
+    font-size: 1.4rem;
+    margin-top: 1.1rem;
+    color: #2962FF;
+    transition: border-bottom 500ms;
+
+}
+.link-forget:hover{
+    border-bottom: 1px solid #2962FF;
+}
+.forget-pass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.btn-pass{
+    width: 20rem;
+    background-color: #F9A825;
+    margin-top: 3rem;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1.2rem;
+}
+.arrow-back{
+    text-align: center;
+    font-size: 2rem;
+    color: #651FFF;
+    cursor: pointer;
+    transition: border-bottom 500ms;
+    margin-top: 1.1rem;
+
+
+}
+.arrow-back:hover{
+    border-bottom: 1px solid #651FFF;
+}
+/* forget class js */
+.forget.register{
+    display: none;
+    transition: all 1s;
+
+}
+.forget.login{
+    display: none;
+    transition: all 1s;
+
+}
+.forget.circle{
+    display: none;
+    transition: all 1s;
+
+}
+.forget.forget-pass{
+    display: flex;
+    transition: all ease 1s;
+    animation-name: bottomTop;
+    animation-duration: 500ms;
+
+}
+/* end forget class js */
+.theme{
+    font-size: 4rem;
+    color: #8a8973 ;
+    cursor: pointer;
+    transition: color 1s;
+}
+
+/* theme  */
+/* "\f185" */
+.dark .theme{
+    color: #FFD600;
+    
+}
+.dark.form{
+    background-color: #121212;
+    box-shadow: 0px 0px 8px 4px rgb(31, 27, 27);
+}
+
+.dark.fa-moon-o:before{
+    content: "\f185";
+}
+.dark:is(.one-l,.one-r,.one-f,.two-l,.two-r,.three-r,.h1){
+    color: #fff !important;
+}

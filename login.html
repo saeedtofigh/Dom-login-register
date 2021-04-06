@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="form">
+        <div class="circle" id="change-form">
+            <a  class="fa fa-user-plus"></a>
+
+        </div>
+        <div id="theme" class="theme">
+            <span class="fa fa-moon-o "></span>
+        </div>
+
+        <form class="login">
+            <label class="label one-l">نام کاربری</label>
+            <input placeholder="نام کاربری را وارد کنید..." type="text" class="input">
+            <label class="label two-l">رمزعبور</label>
+            <input type="text" class="input" placeholder="رمز عبور را وارد کنید...">
+            <button class="btn btn-login" type="submit">
+                ورود
+                <span class="fa  fa-sign-in"></span>
+            </button>
+                <a id="btn-forget" class="link-forget">رمز عبور خود را فراموش کرده اید؟</a>
+        </form>
+        <!-- register -->
+        <form  class="register" id="register">
+            <label class="label one-r">نام کاربری</label>
+            <input placeholder="نام کاربری را وارد کنید..." type="text" class="input">
+            <label class="label two-r">ایمیل</label>
+            <input type="text" class="input" placeholder="ایملیل خود را وارد کنید...">
+            <label class="label three-r">رمزعبور</label>
+            <input type="text" class="input" placeholder="رمز عبور را وارد کنید...">
+            <button class="btn btn-register" type="submit">
+                ثبت نام
+                <span class="fa fa-user-plus"></span>
+            </button>
+        </form>
+        <!-- /register -->
+
+        <!-- forget-pass -->
+        <form  class="forget-pass">
+            <h1 class="h1">فراموشی رمز عبور</h1>
+            <label class="label one-f">جهت دریافت رمز عبور ایمیل خود را وارد کنید:</label>
+            <input placeholder="ایمیل خود را وارد کنید..." type="email"  class="input">
+            <button class="btn btn-pass">
+                تایید
+                <span class="fa fa-send"></span>
+            </button>
+            <a class="arrow-back" id="arrow-back">
+                برگشت به عقب 
+            <span class="fa fa-arrow-circle-right"></span>
+            </a>
+        </form>
+        <!-- /forget-pass -->
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
